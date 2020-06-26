@@ -7,11 +7,12 @@ def application(environ, start_response):
 	b = c.get('b', [''])[0]
 
 	if '' in [a,b]:
-		a, b = 0, 0
+		add = -1
+		mul = -1
 	else:
 		a, b = int(a), int(b)
-	add = a + b
-	mul = a * b
+		add = a + b
+		mul = a * b
 	response_body = html % {
 		'Add': add,
 		'Mul': mul,
