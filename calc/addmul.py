@@ -6,13 +6,14 @@ def application(environ, start_response):
 	a = c.get('a', [''])[0]
 	b = c.get('b', [''])[0]
 
-	if '' in [a,b]:
-		add = -1
-		mul = -1
-	else:
+	add, mul = -1, -1
+	try:
 		a, b = int(a), int(b)
-		add = a + b
+		sum = a + b
 		mul = a * b
+	except ValueError:
+		sum = "Error"
+		mul = "Error"
 	response_body = html % {
 		'Add': add,
 		'Mul': mul,

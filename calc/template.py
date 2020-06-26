@@ -7,8 +7,8 @@ html = b"""
 			<input type="submit">
 		</form>
 		<p>
-			Add: %(Add)d</br>
-			Mul: %(Mul)d</br>
+			Add: %(Add)s</br>
+			Mul: %(Mul)s</br>
 		</p>
 	</body>
 </html>
